@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2012年的网页 - 1998-2026 Web Page</title>
+    <style>
+        body{
+            background-color: rgb(193,107,255);
+        }
+        #nav-div{
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            right: 10px;
+            width: auto;
+            height: 70px;
+            background: blueviolet;
+            box-shadow: 0 0 25px rgb(0,0,0);
+            font-size: 0px;
+            border-radius: 15px;
+        }
+        #nav-div a{
+            color: white;
+            display: inline-block;
+            width: 100px;
+            height: 100%;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            line-height: 70px;
+            transition: background-color 0.5s ease,
+            box-shadow 0.5s ease;
+            -webkit-transition: background-color 0.5s ease,
+            box-shadow 0.5s ease;
+            border-radius: 15px;
+            text-shadow: 0 5px 10px rgb(0,0,0);
+        }
+        a:hover{
+            background-color: rgb(150,100,255);
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+        a:active{
+            background-color: rgb(150,70,255);
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+        h1,p,h2,i{
+            display: block;
+            text-align: center;
+            font-weight: 300;
+            text-shadow: 0 10px 15px rgb(0,0,0);
+            color: white;
+        }
+        h1{
+            font-size: 40px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 17px;
+        }
+        #text1{
+            position: absolute;
+            right: 25px;
+            display: inline-block;
+            font-size: 25px;
+            margin: 0;
+            line-height: 70px;
+        }
+        button{
+            background-color: rgb(150,120,255);
+            border-radius: 15px;
+            width: 130px;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 18px;
+            -webkit-transition: background-color 0.5s ease;
+            transition: background-color 0.5s ease;
+            display: block;
+            margin: 20px auto;
+            line-height: 50%;
+        }
+        button:hover{
+            background-color: rgb(150,70,255);
+        }
+        button:active{
+            background-color: rgb(150,0,255);
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-div">
+        <a href="./1998.html">1998</a>
+        <a href="./2000.html">2000</a>
+        <a href="./2002.html">2002</a>
+        <a href="./2004.html">2004</a>
+        <a href="./2006.html">2006</a>
+        <a href="./2008.html">2008</a>
+        <a href="./2010.html">2010</a>
+        <a href="./2012.html">2012</a>
+        <a href="./index.html">首页</a>
+        <h1 id="text1">1998-2026 Web Page</h1>
+    </div>
+    <br><br><br><br>
+    <h1>Hello!</h1>
+    <h2>1998-2026 Web Page</h2>
+    <p>这是2012年的网页,通过HTML搭建</p>
+    <i>Hello,World!</i>
+    <button onclick="window.location.href='./index.html'">返回主页</button>
+</html>
