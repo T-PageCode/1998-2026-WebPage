@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>2014年的网页 - 1998-2026 WebPage</title>
     <style>
+        body{
+            background-color: white;
+        }
         nav{
             position: absolute;
             top: 0px;
@@ -17,7 +20,6 @@
             display: inline-block;
             width: 100px;
             height: 100%;
-            text-decoration: none;
             color: white;
             line-height: 70px;
             text-align: center;
@@ -39,6 +41,71 @@
             height: calc(100% - 70px);
             margin: 0;
         }
+        aside h1{
+            color: white;
+            font-size: 25px;
+        }
+        aside a{
+            display: block;
+            width: 160px;
+            height: 50px;
+            color: white;
+            line-height: 50px;
+            text-align: center;
+            font-size: 18px;
+            transition: background-color 0.35s ease;
+            text-decoration: none;
+        }
+        aside a:hover{
+            background-color: rgb(50,0,255);
+        }
+        aside a:active{
+            background-color: rgb(50,0,200);
+        }
+        #btn1{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 160px;
+            height: 40px;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            background-color: rgb(0,100,255);
+            color: white;
+            transition: background-color 0.35s ease;
+        }
+        #btn1:hover{
+            background-color: rgb(0,50,255)
+        }
+        #btn1:active{
+            background-color: rgb(0,0,255);
+        }
+        h1,p{
+            text-align: center;
+        }
+        *{
+            font-weight: 400;
+        }
+        a{
+            text-decoration: none;
+        }
+        .a-link{
+            color: rgb(132,0,255);
+            transition: color 0.35s ease;
+        }
+        .a-link:hover{
+            color: rgb(50,0,255);
+        }
+        .a-link:active{
+            color: rgb(0,0,150);
+        }
+        #main-content{
+            width: 80%;
+            margin-left: 45px;
+            margin-right: 190px;
+            line-height: 25px;
+        }
     </style>
 </head>
 <body>
@@ -54,6 +121,27 @@
         <a href="./2014.html">2014</a>
         <a href="./index.html">首页</a>
     </nav>
-    <aside></aside>
+    <aside>
+        <h1>1998-2026 WebPage</h1>
+        <a href="./1998.html">1998</a>
+        <a href="./2000.html">2000</a>
+        <a href="./2002.html">2002</a>
+        <a href="./2004.html">2004</a>
+        <a href="./2006.html">2006</a>
+        <a href="./2008.html">2008</a>
+        <a href="./2010.html">2010</a>
+        <a href="./2012.html">2012</a>
+        <a href="./2014.html">2014</a>
+        <a href="./index.html">首页</a>
+        <a href="https://github.com/T-PageCode/1998-2026-WebPage">GitHub</a>
+        <button id="btn1" onclick="window.location.href='./index.html'">返回主页</button>
+    </aside>
+    <br><br><br>
+    <div id="main-content">
+        <h1>Hello!这里是1998-2026 WebPage的2014年网页</h1>
+        <p>1998-2026 Web Page是对比1998到2026网页的GitHub项目,GitHub项目地址是<a href="https://github.com/T-PageCode/1998-2026-WebPage" class="a-link">https://github.com/T-PageCode/1998-2026-WebPage</a></p>
+        <p>本项目是一个实验小项目,对比1998-2026年的网页,其中有1998年的简陋、2002年的多样、2004年的导航与居中、2012年的华丽、2014年的扁平等等</p>
+        <p>界面:主页面模仿Windows 98桌面,1998年的网页只有几个简单的文字和简陋的CSS调文字颜色,2000年CSS开始多样,标签开始变多,2002年有了第一个简易的导航栏,2004年则是大转变,导航栏变得好看了,文字也居中了,2006和2008以及2010跟2004基本差不多,只是文字、按钮样式、配色、长宽有点改变,2012画风突变,拟物化大爆发,导航栏变成悬浮导航栏,还有之前从来没见过的阴影和圆角,2014则是回归扁平化,增加类似Windows 8 Charm栏</p>
+    </div>
 </body>
 </html>
