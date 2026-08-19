@@ -1,0 +1,228 @@
+body{
+    background-color: rgb(0, 102, 63);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: simsun;
+}
+#window{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(0, 17, 253);
+    border: 3px outset rgb(110,100,90);
+    width: 800px;
+    height: 400px;
+    visibility: visible;
+}
+#window.windowmax{
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100vw;
+    height: calc(100% - 40px);
+    border: none;
+}
+#window.windowmax #content{
+    top: 30px;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: calc(100% - 70px)
+}
+#window.windowmax #max{
+    top: 1%;
+}
+#window.windowmax #min{
+    top: 1%;
+}
+#window.windowmax #close{
+    top: 1%;
+}
+#content{
+    position: fixed;
+    top: 53.7%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 100%;
+    height: 370px;
+    user-select: contain;
+}
+#close{
+    position: fixed;
+    top: 3.5%;
+    right: -8px;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(170, 170, 170);
+    z-index: 1;
+    border: 1px outset rgb(53,53,53);
+    font-family: "Marlett";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#max{
+    position: fixed;
+    top: 3.5%;
+    right: 15px;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(170, 170, 170);
+    z-index: 1;
+    border: 1px outset rgb(53,53,53);
+    font-family: "Marlett";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#min{
+    position: fixed;
+    top: 3.5%;
+    right: 38px;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(170, 170, 170);
+    z-index: 1;
+    border: 1px outset rgb(53, 53, 53);
+    font-family: "Marlett";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#close:active,#max:active,#min:active{
+    border-style: inset;
+}
+#close,#max,#min{
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    display: flex;
+}
+#text1{
+    color: black;
+}
+#desktop-btn{
+    position: fixed;
+    margin-top: 65px;
+    margin-left: 120px;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+#desktopbtn-texttitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 15px;
+    background-color: white;
+}
+#desktopbtn-text{
+    position: fixed;
+    left: -20%;
+    top: 70%;
+    color: white;
+    background-color: rgb(0, 102, 63);
+    font-size: 13px;
+}
+#title{
+    position: fixed;
+    top: 1%;
+    left: 70px;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 15px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+#window.windowmax #title{
+    top: 0.4%;
+}
+#taskbar{
+    position: fixed;
+    bottom: -23px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 40px;
+    background-color: rgb(150, 140, 130);
+    border: 3px outset rgb(70,70,70);
+}
+#start{
+    position: fixed;
+    bottom: -13px;
+    left: 60px;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 30px;
+    background-color: rgb(170, 160, 150);
+    border: 2px rgb(70,70,70);
+    border-style: outset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+#start:active{
+    border-style: inset;
+}
+#taskbar-program{
+    position: fixed;
+    bottom: -15px;
+    left: 250px;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 30px;
+    background-color: rgb(170, 160, 150);
+    border: 3px rgb(70,70,70);
+    border-style: outset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+#taskbarprogram-icon{
+    position: fixed;
+    top: 35%;
+    left: 150px;
+    transform: translate(-50%,-50%);
+    width: 25px;
+    height: 25px;
+    font-size: 9px;
+    background-color: white;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
