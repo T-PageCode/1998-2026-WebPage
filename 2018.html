@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2018年的网页 - 1998-2026 Web Page</title>
+    <style>
+        *{
+            margin: 0;
+            overflow: hidden;
+        }
+        #menu-button{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transform: translate(-50%,-50%);
+            width: 90px;
+            height: 90px;
+            font-size: 12px;
+            background-color: rgb(235,235,235);
+            border-radius: 10px;
+            transition: background-color 0.5s ease;
+            white-space: nowrap;
+        }
+        #menu-button:hover{
+            background-color: rgb(225,225,225)
+        }
+        #menu-button:active{
+            background-color: rgb(215,215,215)
+        }
+        #menu-button h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-weight: 200;
+        }
+        #menu{
+            position: absolute;
+            top: 0px;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: rgb(230,230,230);
+            transition: right 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #menu a{
+            display: block;
+            margin-top: 10px;
+            width: 90%;
+            height: 40px;
+            color: black;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.5s ease;
+        }
+        #menu a:hover{
+            background-color: rgb(210,210,210);
+        }
+        #menu a:active{
+            background-color: rgb(200,200,200);
+        }
+        #menu h1{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 22px;
+        }
+        *{
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-button">
+        <h1>菜单</h1>
+    </div>
+    <div id="menu">
+        <h1>1998-2026 Web Page</h1>
+        <a href="./1998.html">1998</a>
+        <a href="./2000.html">2000</a>
+        <a href="./2002.html">2002</a>
+        <a href="./2004.html">2004</a>
+        <a href="./2006.html">2006</a>
+        <a href="./2008.html">2008</a>
+        <a href="./2010.html">2010</a>
+        <a href="./2012.html">2012</a>
+        <a href="./2014.html">2014</a>
+        <a href="./2016.html">2016</a>
+        <a href="./2018.html">2018</a>
+        <a href="./index.html">首页</a>
+        <a href="https://github.com/T-PageCode/1998-2026-WebPage">GitHub</a>
+        <a onclick="window.open('./2018.html','_blank')">新建窗口</a>
+    </div>
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.getElementById("menu");
+        menuButton.onclick = () => {
+            if (menu.style.right === "0px") {
+                menu.style.right = "-250px";
+            }
+            else {
+                menu.style.right = "-0px";
+            }
+        }
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#menu') && !e.target.closest('#menu-button')) {
+                menu.style.right = "-250px";
+            }
+        });
+    </script>
+</body>
+</html>
