@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2016的网页 - 1998-2026 Web Page</title>
+    <style>
+        body,html{
+            background-color: rgb(255,255,255);
+        }
+        nav{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 70px;
+            background-color: rgb(31, 31, 255);
+            font-size: 0px;
+            transition: height 0.2s ease;
+            z-index: 1;
+        }
+        nav a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            width: 100px;
+            height: 100%;
+            line-height: 70px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: background-color 0.5s ease,
+            line-height 0.2s ease,
+            height 0.2s ease,
+            font-size 0.2s ease;
+            cursor: pointer;
+        }
+        nav a:hover{
+            background-color: rgb(0, 0, 207);
+        }
+        nav a:active{
+            background-color: rgb(0,0,170)
+        }
+        #btn1{
+            position: fixed;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 170px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            background-color: blue;
+            color: white;
+            font-size: 17px;
+            transition: background-color 0.5s ease;
+            cursor: pointer;
+            z-index: 1;
+        }
+        #btn1:hover{
+            background-color: rgb(0,0,200);
+        }
+        #btn1:active{
+            background-color: rgb(0,00,150);
+        }
+        #mouse{
+            position: fixed;
+            z-index: 0;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%,-50%);
+            background-color: blueviolet;
+            box-shadow: 0 0 20px blueviolet;
+            border-radius: 50%;
+            animation: mousemove 0.5s alternate infinite;
+        }
+        @keyframes mousemove{
+            from{
+                transform: translate(-50%,150%) scale(0.9);
+            }
+            to{
+                transform: translate(-50%,-150%) scale(1.1);
+            }
+        }
+        @media screen and (max-width: 600px) {
+            nav{
+                height: 90px;
+            }
+            nav a{
+                line-height: 50px;
+                font-size: 16px;
+                width: 70px;
+                height: 50%;
+            }
+        }
+        @media screen and (max-width: 300px) {
+            nav{
+                height: 100px;
+            }
+            nav a{
+                line-height: 50px;
+                font-size: 12px;
+                width: 50px;
+                height: 50%;
+            }
+        }
+        @media screen and (max-width: 200px) {
+            nav{
+                height: 120px;
+            }
+            nav a{
+                line-height: 50px;
+                font-size: 8px;
+                width: 30px;
+                height: 50%;
+            }
+        }
+        h1{
+            text-align: center;
+            margin: 0;
+            font-weight: normal;
+            font-size: 60px;
+            color: blueviolet;
+        }
+        h2{
+            text-align: center;
+            margin: 0;
+            font-weight: normal;
+            font-size: 25px;
+            color: blueviolet;
+        }
+        h3{
+            text-align: center;
+            margin: 0;
+            font-weight: normal;
+            font-size: 20px;
+            color: blueviolet;
+        }
+        p{
+            text-align: center;
+            margin: 0;
+            font-weight: normal;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./1998.html">1998</a>
+        <a href="./2000.html">2000</a>
+        <a href="./2002.html">2002</a>
+        <a href="./2004.html">2004</a>
+        <a href="./2006.html">2006</a>
+        <a href="./2008.html">2008</a>
+        <a href="./2010.html">2010</a>
+        <a href="./2012.html">2012</a>
+        <a href="./2014.html">2014</a>
+        <a href="./2016.html">2016</a>
+        <a href="./index.html">首页</a>
+    </nav>
+    <button id="btn1" onclick="window.location.href='./index.html'">返回主页</button>
+    <br><br><br><br>
+    <h1>Hi!</h1>
+    <h2>这里是1998-2026 Web Page  - 2016的网页</h2>
+    <h3>(鼠标旁边会有一个小球在跳动,这是正常的)</h3>
+    <p id="text1"></p>
+    <div id="mouse"></div>
+    <script>
+        const mouse = document.getElementById("mouse");
+        const text1 = document.getElementById("text1");
+        document.addEventListener("mousemove",(e) => {
+            let x = e.clientX;
+            let y = e.clientY;
+            mouse.style.top = y + "px";
+            mouse.style.left = x + "px";
+            text1.innerText = "小球坐标: X: " + x + "px\u00A0\u00A0Y: " + y + "px";
+        })
+    </script>
+</body>
+</html>
