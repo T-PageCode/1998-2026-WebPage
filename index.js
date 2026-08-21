@@ -22,7 +22,7 @@ desktopBtn.ondblclick = () => {
     windowId.style.visibility = "visible";
     taskbar_program.style.visibility = "visible";
     taskbar_program_icon.style.visibility = "visible";
-}
+}                          
 windowId.onclick = (e) => {
     windowId.style.backgroundColor = "rgb(0, 17, 253)";
     e.stopPropagation();
