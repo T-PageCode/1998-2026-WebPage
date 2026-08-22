@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <title>2018年的网页 - 1998-2026 Web Page</title>
     <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
         *{
             margin: 0;
             overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         #menu-button{
             position: absolute;
@@ -45,6 +53,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            z-index: 1;
         }
         #menu a{
             display: block;
@@ -72,6 +81,54 @@
         *{
             font-weight: 300;
         }
+        #text1{
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 50px;
+            z-index: 0;
+        }
+        #text2{
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 20px;
+            z-index: 0;
+        }
+        #mouse{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            border-radius: 50%;
+            box-shadow: 0 0 20px green;
+            pointer-events: none;
+            opacity: 0.3;
+            transition: width 0.3s ease,
+            height 0.3s ease;
+            z-index: 2;
+        }
+        @media screen and (max-width: 600px) {
+            #text1{
+                font-size: 30px;
+            }
+            #text2{
+                font-size: 15px;
+            }
+            #menu-button{
+                left: 10%;
+                width: 50px;
+                height: 50px;
+                font-size: 10px;
+            }
+            #menu{
+                right: -400px;
+                width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,37 +137,70 @@
     </div>
     <div id="menu">
         <h1>1998-2026 Web Page</h1>
-        <a href="./1998.html">1998</a>
-        <a href="./2000.html">2000</a>
-        <a href="./2002.html">2002</a>
-        <a href="./2004.html">2004</a>
-        <a href="./2006.html">2006</a>
-        <a href="./2008.html">2008</a>
-        <a href="./2010.html">2010</a>
-        <a href="./2012.html">2012</a>
-        <a href="./2014.html">2014</a>
-        <a href="./2016.html">2016</a>
-        <a href="./2018.html">2018</a>
-        <a href="./index.html">首页</a>
-        <a href="https://github.com/T-PageCode/1998-2026-WebPage">GitHub</a>
-        <a onclick="window.open('./2018.html','_blank')">新建窗口</a>
+        <a href="./1998.html" draggable="false">1998</a>
+        <a href="./2000.html" draggable="false">2000</a>
+        <a href="./2002.html" draggable="false">2002</a>
+        <a href="./2004.html" draggable="false">2004</a>
+        <a href="./2006.html" draggable="false">2006</a>
+        <a href="./2008.html" draggable="false">2008</a>
+        <a href="./2010.html" draggable="false">2010</a>
+        <a href="./2012.html" draggable="false">2012</a>
+        <a href="./2014.html" draggable="false">2014</a>
+        <a href="./2016.html" draggable="false">2016</a>
+        <a href="./2018.html" draggable="false">2018</a>
+        <a href="./index.html" draggable="false">首页</a>
+        <a href="https://github.com/T-PageCode/1998-2026-WebPage" draggable="false">GitHub</a>
+        <a onclick="window.open('./2018.html','_blank')" style="cursor: pointer;">新建窗口</a>
     </div>
+    <h1 id="text1">Hello!</h1>
+    <p id="text2">这里是1998-2026 Web Page 2018年的网页</p>
+    <div id="mouse"></div>
     <script>
         const menuButton = document.getElementById("menu-button");
         const menu = document.getElementById("menu");
         menuButton.onclick = () => {
-            if (menu.style.right === "0px") {
-                menu.style.right = "-250px";
+            if(window.innerWidth <= 600) {
+                if (menu.style.right === "0px") {
+                    menu.style.right = "-400px";
+                }
+                else {
+                    menu.style.right = "0px";
+                }
             }
-            else {
-                menu.style.right = "-0px";
+            else{
+                if (menu.style.right === "0px") {
+                    menu.style.right = "-250px";
+                }
+                else {
+                    menu.style.right = "0px";
+                }
             }
         }
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('#menu') && !e.target.closest('#menu-button')) {
+        document.addEventListener("click", function(e) {
+            if (!e.target.closest("#menu") && !e.target.closest("#menu-button")) {
+                if (window.innerWidth <= 600) {
+                    menu.style.right = "-400px";
+            }
+            else {
                 menu.style.right = "-250px";
             }
+        }
         });
+        const mouse = document.getElementById("mouse");
+        document.addEventListener("mousemove",(e) => {
+            let x = e.clientX + "px";
+            let y = e.clientY + "px";
+            mouse.style.top = y;
+            mouse.style.left = x;
+        })
+        document.addEventListener("mousedown",(e) => {
+            mouse.style.width = "65px";
+            mouse.style.height = "65px";
+        })
+        document.addEventListener("mouseup",(e) => {
+            mouse.style.width = "50px";
+            mouse.style.height = "50px";
+        })
     </script>
 </body>
 </html>
